@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylePort/loginHalamanStyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+
+
+    <title>Login</title>
+  </head>
+  <body>
+      <div class="container">
+        <div class="card card-login mx-auto a text-center">
+          <div class="card-header ">
+            <h2>Login</h2>
+            <div class="card-body">
+              <form name="myForm">
+                <input type="text" name="username" placeholder="Username"><p></p>
+                <br>
+                <input type="email" name="email" placeholder="123@gmail.com"><p></p>
+                <br>
+                <input type="password" name="pass" placeholder="password"><p></p>
+                <br><br>
+                <input type="password" name="cPass" placeholder="Confirm password"><p></p>
+                <br><br>
+                <a href="halamanUtama.html"><input type="button" value="Log In" onclick="return validation();"></a><br><br>
+                <div id="msg">Format Email Salah !!</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  <script type="text/javascript">
+    function veriftyAge(strAge){
+    var patt = 
+/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return patt.test(strAge);
+  }
+
+    function validation() {
+      const username = document.myForm.username.value;
+      const password = document.myForm.pass.value;
+      const email = document.myForm.email.value;
+      const cPassword = document.myForm.cPass.value;
+
+      const nama = document.getElementsByTagName('p')[0];
+      const sandi = document.getElementsByTagName('p')[2];
+      const emailB = document.getElementsByTagName('p')[1];
+      const cSandi = document.getElementsByTagName('p')[3];
+      const cpBaru = document.getElementsByTagName('input')[3];
+
+      const a = veriftyAge(email);
+
+
+      if (username == "" || email == "" || cPassword == "" || password == ""){
+        if (username == ""){
+          nama.style.color="red";
+          nama.innerHTML = "Error Message"
+          return false;
+        }
+        if (email == ""){
+          emailB.style.color="red";
+          emailB.innerHTML = "Error Message"
+          return false;
+        }
+        if (password == ""){
+          sandi.style.color="red";
+          sandi.innerHTML = "Error Message"
+          return false;
+        }
+        if (cPassword == ""){
+          cSandi.style.color="red";
+          cSandi.innerHTML = "Error Message"
+          return false;
+        }
+      }
+      else {
+        if (password != cPassword) {
+          cpBaru.style.color="red";
+          return false;
+
+        }
+        if (password.length < 6) {
+          sandi.style.color = "red";
+          sandi.innerHTML = "Caracter < 6"
+          return false;
+        }
+
+        if (a == false){
+          var x = document.getElementById("msg");
+          x.className = "show";
+          setTimeout(function(){x.className =
+            x.className.replace("show", ""); }, 3000);
+          return false;
+        }
+      } 
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

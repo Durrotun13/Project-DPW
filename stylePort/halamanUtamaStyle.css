@@ -1,0 +1,257 @@
+* {
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin-top: 30px;
+	font-family: 'Balsamiq Sans', cursive;
+}
+
+/*======= Navbar ======*/
+.nav-item a {
+	color: #dbc1ac;
+	font-size: 20px;
+}
+.navbar-item a:hover{
+	color: red;
+}
+.navbar-brand i{
+	color: #dbc1ac;
+}
+a.active,a:hover{
+    border-left: 5px solid #b93632;
+    color: #b93632;
+}
+/*======= End Navbar =======*/
+
+/*==== Header =======*/
+header{
+	height: 100vh;
+	background: linear-gradient(rgba(0,0,0,0.63),rgba(0,0,0,0.5)),url(../images/mediterranean-346997_1920.jpg)no-repeat center center/cover;
+	top: 0;
+}
+
+.banner{
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 80%;
+}
+
+.heading {
+	animation-name: slide;
+	animation-duration: 2s;
+}
+
+.utama {
+	font-size: 25px;
+	animation-name: slide;
+	animation-duration: 2s;
+	animation-delay: .5s;
+	animation-fill-mode: backwards;
+}
+@keyframes slide {
+	0% {
+		transform: translateX(-1000px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+}
+
+/*==== Akhir Header ====*/
+
+/*==== About Us ====*/
+#about {
+	background: #000;
+	margin-top: 30px;
+	color: #dbc1ac;
+}
+.text {
+	font-size: 28px;
+}
+.about-images{
+	position: relative;
+
+}
+.about-img{
+	position: absolute;
+	width: 220px;
+	transition: all 2s ease;
+}
+.img-1{
+	left:0%;
+	top: 10%;
+}
+.img-2{
+	left:25%;
+	top: 35%;
+	z-index: 20;
+}
+.img-3{
+	left:50%;
+	top: 60%;
+	z-index: 10;
+}
+.img-4{
+	left:50%;
+	top: 10%;
+}
+.img-5{
+	left:0%;
+	top: 60%;
+}
+.about-img:hover{
+	outline: 10px solid #dbc1ac;
+	outline-offset: 32px;
+	transform: scale(1.3) rotate(20deg);
+	z-index: 30;
+	opacity: 1;
+}
+.about-images:hover,.about-img:not(:hover){
+	opacity: 0.9;
+}
+/*=== End About*/
+
+/*=== Tab Makanan ====*/
+.content-4 .nav {
+	justify-content: center;
+	margin: 5%;
+}
+.content-4 .nav-tabs{
+	margin: 10px;
+	border: none;
+	padding: 3px 3px;
+	border-bottom: 0px;
+	text-align: center;
+	cursor: pointer;
+}
+.content-4 {
+	display: block;
+	font-size: 30px;
+	padding: 0px 27px 0px 27px;
+}
+.content-4 span {
+	display: inline-block;
+	padding-bottom: 16px;
+	width: 100%;
+}
+/*========End Tab Makanan =====*/
+
+
+/*========= Galeri =========*/
+#galeri{
+	padding-bottom: 100px;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(0,0,0,0.63),rgba(0,0,0,0.5)),url(../images/4.jpg)no-repeat center center/cover;
+	margin-top: -60px;
+	color: #dbc1ac;
+}
+.menu-card{
+	position: relative;
+	box-shadow: 5px 10px 60px ;
+	max-width: 470px;
+	transition: all .8s;
+	overflow: hidden;
+	cursor: pointer;
+	margin-bottom: 40px;
+}
+.card-header {
+	background-color: #dbc1ac;
+}
+.card-header .title-text{
+	color: #000;
+}
+.back{
+	position: absolute;
+	top: -100%;
+	background: white;
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+	user-select: none;
+	pointer-events: none;
+	transform: rotateY(180deg);
+	transition: top .8s opacity .4s ;
+}
+.text-color{
+	color: #dbc1ac;
+}
+.back-content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.rotate:hover .menu-card{
+	transform: rotateY(180deg);
+}
+.rotate:hover .back{
+	opacity: 1;
+	top: 0;
+	user-select: auto;
+	pointer-events: auto;
+}
+.back-content .btn{
+	color: #dbc1ac;
+}
+.card-footer{
+	background-color: #dbc1ac;
+	color: #000;
+}
+.latar {
+	margin-top: 20px;
+	margin-bottom: 100px;
+}
+/*========End GALERI ==========*/
+
+/* ===== MAP ===== */
+.map {
+	font-size: 30px;
+	padding-top: 2px;
+	color: #000;
+	height: 100%;
+	position: relative;
+
+}
+.contact{
+	width: 100%;
+	background-color: #fff;
+}
+
+.contact .container h2 {
+	margin-top: -15px;
+	font-size: 70px;
+	color: #dbc1ac;
+}
+/*==== END MAP ======*/
+
+
+/* ==== Footer ===== */
+footer{
+	background-color: #000;
+	width: 100%;
+	height: 20.6vh;
+	position: absolute;
+	margin-top: 50px;
+
+}
+footer .text-center p {
+	color: #dbc1ac;
+}
+footer .text-center h4{
+	padding-top: 10px;
+	color: #dbc1ac;
+}
+footer span a{
+	padding: 0.3rem 0.7rem; 
+	color:#dbc1ac;
+}
+/* ==== END Footer ==== */
