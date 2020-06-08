@@ -15,7 +15,7 @@ html{
 	padding: 10px ;
 	/* background-color: #e2e3e4; */
     text-align: center;
-    background-image: url(../img/m.jpg);
+    background-image: url(../img/mono1.jpg);
 }
 
 a {
@@ -76,7 +76,7 @@ header h4 {
     box-shadow: 10px 3px 10px #443b06;
     transition:  all 0.5s;
     /* background: rgba(194, 187, 185, 0.685); */
-    background-image: url(../img/mono5.jpg);
+    background-image: url(../img/mono.jpg);
 }
 
 .card:hover {
