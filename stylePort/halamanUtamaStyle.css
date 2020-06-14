@@ -20,9 +20,12 @@ body {
 .navbar-brand i{
 	color: #dbc1ac;
 }
-a.active,a:hover{
+.nav-item a:hover{
     border-left: 5px solid #b93632;
     color: #b93632;
+}
+header a i:hover,footer span a i:hover{
+    color: red;
 }
 /*======= End Navbar =======*/
 
@@ -153,6 +156,10 @@ header{
 	background: linear-gradient(rgba(0,0,0,0.63),rgba(0,0,0,0.5)),url(../images/4.jpg)no-repeat center center/cover;
 	margin-top: -60px;
 	color: #dbc1ac;
+}
+#galeri .back a:hover{
+    border: 3px solid #b93632;
+    color: #b93632;
 }
 .menu-card{
 	position: relative;
